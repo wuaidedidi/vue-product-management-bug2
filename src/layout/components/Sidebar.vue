@@ -6,7 +6,7 @@
         <el-icon :size="28"><Goods /></el-icon>
       </div>
       <transition name="fade">
-        <span v-show="collapsed" class="logo-text">商品管理平台</span>
+        <span v-show="!collapsed" class="logo-text">商品管理平台</span>
       </transition>
     </div>
 
@@ -78,7 +78,7 @@ const userStore = useUserStore()
 const collapsed = computed(() => appStore.sidebarCollapsed)
 
 // 当前激活的菜单
-const activeMenu = computed(() => route.name)
+const activeMenu = computed(() => route.path)
 
 // 获取菜单路由（过滤隐藏的和需要权限的）
 const menuRoutes = computed(() => {

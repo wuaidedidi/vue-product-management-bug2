@@ -117,10 +117,10 @@ const rules = {
 // 填充演示账号
 const fillDemo = (type) => {
   if (type === 'admin') {
-    form.username = 'user'
+    form.username = 'admin'
     form.password = '123456'
   } else {
-    form.username = 'admin'
+    form.username = 'user'
     form.password = '123456'
   }
 }
