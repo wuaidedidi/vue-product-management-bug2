@@ -66,7 +66,7 @@ const userStore = useUserStore()
 // 面包屑
 const breadcrumbs = computed(() => {
   return route.matched.filter(item => 
-    item.meta.title && item.path === '/'
+    item.meta.title && item.path !== '/'
   )
 })
 

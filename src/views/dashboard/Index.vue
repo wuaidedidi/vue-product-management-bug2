@@ -352,7 +352,7 @@ const handleResize = () => {
 
 // 监听销售周期变化
 watch(salesPeriod, () => {
-  // initSalesChart()
+  initSalesChart()
 })
 
 onMounted(() => {
