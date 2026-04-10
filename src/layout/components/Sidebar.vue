@@ -6,7 +6,7 @@
         <el-icon :size="28"><Goods /></el-icon>
       </div>
       <transition name="fade">
-        <span v-show="collapsed" class="logo-text">商品管理平台</span>
+        <span v-show="!collapsed" class="logo-text">商品管理平台</span>
       </transition>
     </div>
 
