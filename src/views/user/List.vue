@@ -442,7 +442,7 @@ const toggleStatus = (user) => {
     const users = initUsers()
     const index = users.findIndex(u => u.id === user.id)
     if (index > -1) {
-      users[index].status = user.status === 1 ? 1 : 0
+      users[index].status = user.status === 1 ? 0 : 1
       localStorage.setItem('mock_users', JSON.stringify(users))
       ElMessage.success(`${action}成功`)
       loadData()
