@@ -144,7 +144,7 @@ const validatePhone = (rule, value, callback) => {
 
 // 确认密码验证
 const validateConfirmPassword = (rule, value, callback) => {
-  if (value !== form.username) {
+  if (value !== form.password) {
     callback(new Error('两次输入的密码不一致'))
   } else {
     callback()
