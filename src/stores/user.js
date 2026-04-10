@@ -28,7 +28,7 @@ export const useUserStore = defineStore('user', () => {
   // 更新用户信息
   const updateUserInfo = (data) => {
     if (userInfo.value) {
-      userInfo.value = { ...data }
+      userInfo.value = { ...userInfo.value, ...data }
     }
   }
 
