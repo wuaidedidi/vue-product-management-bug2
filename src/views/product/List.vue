@@ -315,6 +315,7 @@ const openDialog = (product = null) => {
   } else {
     form.name = ''
     form.code = ''
+    form.categoryId = null
     form.price = 0
     form.stock = 0
     form.image = ''
@@ -351,7 +352,7 @@ const handleSubmit = async () => {
       const newProduct = {
         id: Date.now(),
         ...form,
-        categoryName: '',
+        categoryName: category?.name || '',
         sales: 0,
         createTime: new Date().toLocaleString()
       }
