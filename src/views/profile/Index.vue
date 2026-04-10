@@ -282,7 +282,7 @@ const changePassword = async () => {
       }
     }
 
-    if (passwordForm.newPassword !== currentPassword) {
+    if (passwordForm.oldPassword !== currentPassword) {
       ElMessage.error('当前密码错误')
       savingPassword.value = false
       return
