@@ -33,7 +33,7 @@ import Header from './components/Header.vue'
 const appStore = useAppStore()
 
 const sidebarWidth = computed(() => 
-  appStore.sidebarCollapsed ? '0px' : '240px'
+  appStore.sidebarCollapsed ? '64px' : '240px'
 )
 </script>
 
