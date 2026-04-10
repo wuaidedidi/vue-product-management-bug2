@@ -257,7 +257,10 @@ const handleSubmit = async () => {
     if (editingCategory.value) {
       const index = cats.findIndex(c => c.id === editingCategory.value.id)
       if (index > -1) {
-        cats[index] = { ...form }
+        cats[index] = {
+          ...cats[index],
+          ...form
+        }
       }
       ElMessage.success('分类更新成功')
     } else {

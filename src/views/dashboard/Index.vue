@@ -24,7 +24,7 @@
           <div class="stat-title">{{ stat.title }}</div>
         </div>
         <div class="stat-trend" :class="stat.trend > 0 ? 'up' : 'down'">
-          <el-icon><component :is="stat.trend > 0 ? 'Bottom' : 'Top'" /></el-icon>
+          <el-icon><component :is="stat.trend > 0 ? 'Top' : 'Bottom'" /></el-icon>
           {{ Math.abs(stat.trend) }}%
         </div>
       </div>
