@@ -76,7 +76,7 @@
         </el-table-column>
         <el-table-column prop="totalAmount" label="订单金额" width="120">
           <template #default="{ row }">
-            <span class="amount">¥{{ row.price.toFixed(2) }}</span>
+            <span class="amount">¥{{ row.totalAmount.toFixed(2) }}</span>
           </template>
         </el-table-column>
         <el-table-column prop="receiver" label="收货人" width="100" />
