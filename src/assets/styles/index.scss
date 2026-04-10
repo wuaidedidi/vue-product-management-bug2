@@ -1,0 +1,123 @@
+// 主样式入口
+@import './variables.scss';
+@import './reset.scss';
+
+// Element Plus 主题覆盖
+:root {
+  --el-color-primary: #{$primary-color};
+  --el-color-primary-light-3: #{$primary-light};
+  --el-color-primary-dark-2: #{$primary-dark};
+  --el-border-radius-base: #{$border-radius};
+}
+
+// 全局工具类
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// 卡片样式
+.card {
+  background: $bg-white;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-sm;
+  padding: 20px;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: $shadow;
+  }
+}
+
+// 页面标题
+.page-header {
+  margin-bottom: 24px;
+
+  .page-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $text-primary;
+    margin-bottom: 8px;
+  }
+
+  .page-desc {
+    font-size: 14px;
+    color: $text-secondary;
+  }
+}
+
+// 表格操作按钮
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+// 搜索区域
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: $bg-white;
+  border-radius: $border-radius-lg;
+}
+
+// 动画
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+// Element Plus 输入框自动填充样式优化
+.el-input__wrapper {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: #1f2937 !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+// 表格固定列阴影
+.el-table__fixed-right {
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.08);
+}
+
+// Modal 滚动条优化
+.el-dialog__body {
+  max-height: 60vh;
+  overflow-y: auto;
+}
